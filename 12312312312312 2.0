@@ -1,0 +1,66 @@
+local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"))()
+local Window = Library.CreateLib("Viper", "Midnight")
+
+--MAIN
+local Main = Window:NewTab("SuperHuman")
+local MainSection = Main:NewSection("Superhuman Hacks")
+
+MainSection:NewSlider("Speed Hacks", "Set Speed", 500, 16, function(s) -- 500 (MaxValue) | 0 (MinValue)
+    game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = s
+end)
+
+
+MainSection:NewSlider("Jump Hacks", "Set Jump", 350, 50, function(s) -- 500 (MaxValue) | 0 (MinValue)
+    game.Players.LocalPlayer.Character.Humanoid.JumpPower = s
+end)
+
+MainSection:NewButton("Reset JP/SH", "Reset Speed and Jump Hacks to normal speed", function()
+    game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 16
+    game.Players.LocalPlayer.Character.Humanoid.JumpPower = 50
+end)  
+
+MainSection:NewButton("Back/Front Flip", "Makes u Flip", function()
+    loadstring(game:HttpGet('https://pastebin.com/raw/7wDcPtLk'))()
+end)
+
+MainSection:NewToggle("Super-Human", "go fast and jump high", function(state)
+    if state then
+        game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 120
+        game.Players.LocalPlayer.Character.Humanoid.JumpPower = 75
+    else
+        game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 16
+        game.Players.LocalPlayer.Character.Humanoid.JumpPower = 50
+    end
+end)
+
+MainSection:NewButton("Double Jump", "Makes u Double Jump", function()
+    loadstring(game:HttpGet("https://pastebin.com/raw/Gjm21fvk", true))()
+end)  
+
+MainSection:NewButton("Speed Hacks 2.0", "Set Speed 2.0", function()
+    loadstring(game:HttpGet("https://pastebin.com/raw/cruUwxaW"))()
+end) 
+
+
+
+--MISC
+local Misc = Window:NewTab("MOD")
+local MiscSection = Misc:NewSection("ADMIN COMMANDS")
+
+MiscSection:NewButton("ADMIN COMMANDS", "GIVES US ADMIN COMANNDS", function()
+    loadstring(game:HttpGet("https://pastebin.com/raw/wxQe9FEX", true))()
+end)  
+
+MiscSection:NewButton("ADMIN COMMANDS 2.0", "GIVES US ADMIN COMANNDS 2.0", function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source", true))()
+end)  
+
+MiscSection:NewButton("Chat Spoofer", "Lets you chat for other people", function()
+    loadstring(game:HttpGet(('https://pastebin.com/raw/djBfk8Li'),true))()
+end)
+
+MiscSection:NewButton("Bypassed Fly", "bird mode", function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/Nicuse/RobloxScripts/main/BypassedFly.lua"))() 
+
+    Fly(true)
+end)
