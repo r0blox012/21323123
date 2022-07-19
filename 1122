@@ -1,0 +1,54 @@
+local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"))()
+local Window = Library.CreateLib("nigga crazy", "Synapse")
+
+--main
+local Main = Window:NewTab("Main")
+local MainSection = Main:NewSection("nigga mad")
+
+
+MainSection:NewButton("ishowspeed", "fast like black", function()
+    loadstring(game:HttpGet("https://pastebin.com/raw/cruUwxaW"))()
+end)
+
+MainSection:NewToggle("Black superman", "superman but black", function(state)
+    if state then
+        game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 120
+        game.Players.LocalPlayer.Character.Humanoid.JumpPower = 55
+    else
+        game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 16
+        game.Players.LocalPlayer.Character.Humanoid.JumpPower = 16
+     end
+end)
+
+
+
+--LOCAL Drugs
+local Drugs = Window:NewTab("Second")
+local DrugsSection = Drugs:NewSection("Drugs")
+ 
+DrugsSection:NewSlider("nigga fast 2.0", "fast like nigga", 500, 16, function(s) -- 500 (MaxValue) | 0 (MinValue)
+    game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = s
+end)
+
+
+DrugsSection:NewSlider("JumpPower", "Jumplike a nigga 2.0", 350, 50, function(s) -- 500 (MaxValue) | 0 (MinValue)
+    game.Players.LocalPlayer.Character.Humanoid.JumpPower = s
+end)
+
+DrugsSection:NewButton("reset nigga", "makes u white", function()
+    game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 16
+    game.Players.LocalPlayer.Character.Humanoid.JumpPower = 50
+end)  
+
+
+--Misc
+local Misc = Window:NewTab("Misc")
+local MiscSection = Misc:NewSection("Others")
+
+MiscSection:NewButton("nigga super man", "give u nigga abilites", function()
+    loadstring(game:HttpGet("https://pastebin.com/raw/Gjm21fvk", true))()
+end)  
+
+MiscSection:NewButton("nigga super man 2.0", "give u nigga abilites2 2.0", function()
+    loadstring(game:HttpGet("https://pastebin.com/raw/wxQe9FEX", true))()
+end)  
